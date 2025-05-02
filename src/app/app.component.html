@@ -1,0 +1,20 @@
+<div>Roll History
+  @for( call of roll; track call) {
+    <div>{{call.diceA}},{{call.diceB}}</div>
+  }
+</div>
+
+<div> 
+<button (click)="1" >one</button>
+<button (click)="2" >two</button>
+<button (click)="3" >three</button>  
+<button (click)="4" >four</button>
+<button (click)="5" >five</button>
+<button (click)="6" >six</button>
+
+</div>
+<div>Enter dice1</div>
+<input type="text" [(ngModel)]="diceA" />
+<div>Enter dice2</div>
+<input type="text" [(ngModel)]="diceB" />
+  <button (click)="trackDice()">Track Dice</button>
