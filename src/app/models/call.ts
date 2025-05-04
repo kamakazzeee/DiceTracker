@@ -1,6 +1,7 @@
 export class Call {
   public diceA: number;
   public diceB: number;
+
  
   constructor(
     diceA: number,

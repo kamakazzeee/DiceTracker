@@ -1,20 +1,99 @@
-<div>Roll History
+<div>Roll History Below
   @for( call of roll; track call) {
-    <div>{{call.diceA}},{{call.diceB}}</div>
+    {{call.diceA}},{{call.diceB}} --
   }
 </div>
 
-<div> 
-<button (click)="1" >one</button>
-<button (click)="2" >two</button>
-<button (click)="3" >three</button>  
-<button (click)="4" >four</button>
-<button (click)="5" >five</button>
-<button (click)="6" >six</button>
-
+<div>
+  <button (click)="onClickAces()">aces_11</button>
 </div>
+
+<div>
+  <button (click)="onClickAceDuece()">ace_deuce_21</button>
+</div>
+ 
+<div>
+  <button (click)="onClickEasyFour()">easy_four_31</button>
+</div>
+
+<div>
+  <button (click)="onClickHardFour()">hard_four_22</button>
+</div>
+
+<div>
+  <button (click)="onClickFive41()">five_41</button>
+</div>
+
+<div>
+  <button (click)="onClickFive32()">five_32</button>
+</div>
+
+<div>
+  <button (click)="onClickEasySix51()">easy_six_51</button>
+</div>
+
+<div>
+  <button (click)="onClickEasySix42()">easy_six_42</button>
+</div>
+ 
+<div>
+  <button (click)="onClickHardSix()">hard_six_33</button>
+</div>
+
+<div>
+  <button (click)="onClickSeven61()">seven_61</button>
+</div>
+
+<div>
+  <button (click)="onClickSeven52()">seven_52</button>
+</div>
+
+<div>
+  <button (click)="onClickSeven34()">seven_34</button>
+</div>
+
+<div>
+  <button (click)="onClickEasyEight53()">easy_eight_53</button>
+</div>
+
+<div>
+  <button (click)="onClickHardEight()">hard_eight_44</button>
+</div>
+
+<div>
+  <button (click)="onClickEasyEight62()">easy_eight_62</button>
+</div>
+
+<div>
+  <button (click)="onClickNine54()">nine_54</button>
+</div>
+
+<div>
+  <button (click)="onClickNine63()">nine_63</button>
+</div>
+
+<div>
+  <button (click)="onClickEasyTen()">ten_64</button>
+</div>
+
+<div>
+  <button (click)="onClickHardTen()">hard_ten_55</button>
+</div>
+
+<div>
+  <button (click)="onClickYoEleven()">yo_eleven_65</button>
+</div>
+
+<div>
+  <button (click)="onClickTwelve()">twelve_66</button>
+</div>
+
+<div>
+  <button (click)="onClickNoRoll()">NO ROLL</button>
+</div> 
+
 <div>Enter dice1</div>
 <input type="text" [(ngModel)]="diceA" />
 <div>Enter dice2</div>
 <input type="text" [(ngModel)]="diceB" />
-  <button (click)="trackDice()">Track Dice</button>
+<button (click)="trackDice()">Track Dice</button>
