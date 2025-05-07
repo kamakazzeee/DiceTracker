@@ -1,99 +1,89 @@
-<div>Roll History Below
+<h1>
+DiceTracker 1.0
+
+</h1>
+
+  <h2>Welcome to the Dice Tracker!</h2>
+
+
+<img src="./DiceIcons/DiceCombos.png" class="DiceCombos" sizes="height: 50%; width: 50%;" style="align-items: center;"/>
+
+<p style ="text-align: center;">
+  Keep track of your dice rolls here. 
+
+</p>
+
+
+<div class = "RollHistory" ><p>Roll History Below</p>
   @for( call of roll; track call) {
-    {{call.diceA}},{{call.diceB}} --
-  }
+    -{{call.diceA}},{{call.diceB}}-
+   <!--  @switch (call.outcome) {
+        
+      @case (CrapsCall.ACES_11){
+        <img src="./DiceIcons/DiceOne11.png" class="Dicepic"/>
+        
+      }
+      @case (CrapsCall.ACE_DEUCE_21){
+        <img src="./DiceIcons/DiceTwo21.png" class="Dicepic"/>
+        
+      }
+      @case (CrapsCall.EASY_FOUR_31){
+        <img src="./DiceIcons/DiceThree31.png" class="Dicepic"/>
+        
+      }
+      @case (CrapsCall.HARD_FOUR_22){
+        <img src="./DiceIcons/DiceFour22.png" class="Dicepic"/>
+        
+      }
+      @default {
+        <img src="./DiceIcons/DiceNoRoll00.png" class="Dicepic"/>
+        
+      }
+  } -->
+}
 </div>
 
-<div>
-  <button (click)="onClickAces()">aces_11</button>
+<p>Click the button for what rolls and the site takes care of the rest!</p>
+
+
+<div class="button-container">
+  <button (click)="onClickTwo11()"><img src="./DiceIcons/DiceTwo11.png" class="DiceButton"/></button>
+  <button (click)="onClickThree21()"><img src="./DiceIcons/DiceThree21.png" class="DiceButton"/></button>
+  <button (click)="onClickFourEasy31()"><img src="./DiceIcons/DiceFourEasy31.png" class="DiceButton"/></button>
+  <button (click)="onClickFourHard22()"><img src="./DiceIcons/DIceFourHard22.png" class="DiceButton"/></button>
+  <button (click)="onClickFive41()"><img src="./DiceIcons/DiceFive41.png" class="DiceButton"/></button>
+  <button (click)="onClickFive32()"><img src="./DiceIcons/DiceFive32.png" class="DiceButton"/></button>
+  <button (click)="onClickSixEasy51()"><img src="./DiceIcons/DiceFive32.png" class="DiceButton"/></button>
+  <button (click)="onClickSixEasy42()"><img src="./DiceIcons/DiceSixEasy42.png" class="DiceButton"/></button>
+  <button (click)="onClickSixHard33()"><img src="./DiceIcons/DiceSixHard33.png" class="DiceButton"/></button>
 </div>
 
-<div>
-  <button (click)="onClickAceDuece()">ace_deuce_21</button>
+<div class="button-container">
+  <button (click)="onClickSeven61()"><img src="./DiceIcons/DiceSeven61.png" class="DiceButton"/></button>
+  <button (click)="onClickSeven52()"><img src="./DiceIcons/DiceSeven52.png" class="DiceButton"/></button>
+  <button (click)="onClickSeven43()"><img src="./DiceIcons/DiceSeven43.png" class="DiceButton"/></button>
 </div>
- 
-<div>
-  <button (click)="onClickEasyFour()">easy_four_31</button>
-</div>
-
-<div>
-  <button (click)="onClickHardFour()">hard_four_22</button>
-</div>
-
-<div>
-  <button (click)="onClickFive41()">five_41</button>
-</div>
-
-<div>
-  <button (click)="onClickFive32()">five_32</button>
+<div class ="button-container">
+  <button (click)="onClickEightEasy53()"><img src="./DiceIcons/DiceEightEasy53.png" class="DiceButton"/></button>
+  <button (click)="onClickEightHard44()"><img src="./DiceIcons/DiceEightHard44.png" class="DiceButton"/></button>
+  <button (click)="onClickEightEasy62()"><img src="./DiceIcons/DiceEightEasy62.png" class="DiceButton"/></button>
+  <button (click)="onClickNine54()"><img src="./DiceIcons/DiceNine54.png" class="DiceButton"/></button>
+  <button (click)="onClickNine63()"><img src="./DiceIcons/DiceNine63.png" class="DiceButton"/></button>
+  <button (click)="onClickTenEasy64()"><img src="./DiceIcons/DiceTenEasy64.png" class="DiceButton"/></button>
+  <button (click)="onClickTenHard55()"><img src="./DiceIcons/DiceTenHard55.png" class="DiceButton"/></button>
+  <button (click)="onClickElevenYo65()"><img src="./DiceIcons/DiceElevenYo65.png" class="DiceButton"/></button>
+  <button (click)="onClickTwelve66()"><img src="./DiceIcons/DiceTwelve66.png" class="DiceButton"/></button>
 </div>
 
-<div>
-  <button (click)="onClickEasySix51()">easy_six_51</button>
-</div>
-
-<div>
-  <button (click)="onClickEasySix42()">easy_six_42</button>
-</div>
- 
-<div>
-  <button (click)="onClickHardSix()">hard_six_33</button>
-</div>
-
-<div>
-  <button (click)="onClickSeven61()">seven_61</button>
-</div>
-
-<div>
-  <button (click)="onClickSeven52()">seven_52</button>
-</div>
-
-<div>
-  <button (click)="onClickSeven34()">seven_34</button>
-</div>
-
-<div>
-  <button (click)="onClickEasyEight53()">easy_eight_53</button>
-</div>
-
-<div>
-  <button (click)="onClickHardEight()">hard_eight_44</button>
-</div>
-
-<div>
-  <button (click)="onClickEasyEight62()">easy_eight_62</button>
-</div>
-
-<div>
-  <button (click)="onClickNine54()">nine_54</button>
-</div>
-
-<div>
-  <button (click)="onClickNine63()">nine_63</button>
-</div>
-
-<div>
-  <button (click)="onClickEasyTen()">ten_64</button>
-</div>
-
-<div>
-  <button (click)="onClickHardTen()">hard_ten_55</button>
-</div>
-
-<div>
-  <button (click)="onClickYoEleven()">yo_eleven_65</button>
-</div>
-
-<div>
-  <button (click)="onClickTwelve()">twelve_66</button>
-</div>
-
-<div>
-  <button (click)="onClickNoRoll()">NO ROLL</button>
+<div class="button-container">
+  <button (click)="onClickNoRoll00()"><img src="./DiceIcons/DiceNoRoll00.png" class="DiceButton"/></button>
 </div> 
 
-<div>Enter dice1</div>
+
+
+<!-- <div>Enter dice1</div>
 <input type="text" [(ngModel)]="diceA" />
 <div>Enter dice2</div>
 <input type="text" [(ngModel)]="diceB" />
-<button (click)="trackDice()">Track Dice</button>
+<button (click)="trackDice()">Track Dice</button> -->
+

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Call } from './models/call';
+import { CrapsCall } from './models/CrapsCall';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [ FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -14,23 +15,25 @@ export class AppComponent {
   public title = 'DiceTracker';
   public diceA = 0;
   public diceB = 0;
-  public roll: Call[] = [new Call(1, 6), new Call(2, 4)];
+  public roll: Call[] = []; 
+  public outcome: CrapsCall = CrapsCall.NO_ROLL;
+  public CrapsCall = CrapsCall;
 
-  onClickAces() {
+  onClickTwo11() {
     console.log('Button was clicked!');
     this.roll.push(new Call(1, 1));
   }
 
-  onClickAceDuece() {
+  onClickThree21() {
     console.log('Button was clicked!');
     this.roll.push(new Call(2, 1));
   }
 
-  onClickEasyFour() {
+  onClickFourEasy31() {
     console.log('Button was clicked!');
     this.roll.push(new Call(3, 1));
   }
-  onClickHardFour() {
+  onClickFourHard22() {
     console.log('Button was clicked!');
     this.roll.push(new Call(2, 2));
   }
@@ -42,15 +45,15 @@ export class AppComponent {
     console.log('Button was clicked!');
     this.roll.push(new Call(3, 2));
   }
-  onClickEasySix51() {
+  onClickSixEasy51() {
     console.log('Button was clicked!');
     this.roll.push(new Call(5, 1));
   }
-  onClickHardSix() {
+  onClickSixHard33() {
     console.log('Button was clicked!');
     this.roll.push(new Call(3, 3));
   }
-  onClickEasySix42() {
+  onClickSixEasy42() {
     console.log('Button was clicked!');
     this.roll.push(new Call(4, 2));
   }
@@ -62,19 +65,19 @@ export class AppComponent {
     console.log('Button was clicked!');
     this.roll.push(new Call(5, 2));
   }
-  onClickSeven34() {
+  onClickSeven43() {
     console.log('Button was clicked!');
     this.roll.push(new Call(3, 4));
   }
-  onClickEasyEight53() {
+  onClickEightEasy53() {
     console.log('Button was clicked!');
     this.roll.push(new Call(5, 3));
   }
-  onClickHardEight() {
+  onClickEightHard44() {
     console.log('Button was clicked!');
     this.roll.push(new Call(4, 4));
   }
-  onClickEasyEight62() {
+  onClickEightEasy62() {
     console.log('Button was clicked!');
     this.roll.push(new Call(6, 2));
   }
@@ -86,25 +89,25 @@ export class AppComponent {
     console.log('Button was clicked!');
     this.roll.push(new Call(6, 3));
   }
-  onClickEasyTen() {
+  onClickTenEasy64() {
     console.log('Button was clicked!');
     this.roll.push(new Call(6, 4));
   }
-  onClickHardTen() {
+  onClickTenHard55() {
     console.log('Button was clicked!');
     this.roll.push(new Call(5, 5));
   }
-  onClickYoEleven() {
+  onClickElevenYo65() {
     console.log('Button was clicked!');
     this.roll.push(new Call(6, 5));
   }
-  onClickTwelve() {
+  onClickTwelve66() {
     console.log('Button was clicked!');
     this.roll.push(new Call(6, 6));
   }
-  onClickNoRoll() {
+  onClickNoRoll00() {
     console.log('Button was clicked!');
-    this.roll.push(new Call(7, 7));
+    this.roll.push(new Call(0, 0));
   }
   public trackDice() {
     this.roll.push(new Call(this.diceA, this.diceB));
