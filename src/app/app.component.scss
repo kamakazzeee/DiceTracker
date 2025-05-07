@@ -1,21 +1,11 @@
 // app.component.scss
+@import '../variables.scss';
+
 
 // Variables for colors and fonts
-$background-color: #01771f; // Light blue
-$text-color: #333; // Dark gray
-$text-color-red: #ff0000; // Red for error messages
-$font-family: 'Arial', sans-serif;
+
 
 // Apply styles to the body
-body {
-    margin: 0;
-    padding: 0;
-    background-color: $background-color;
-    color: $text-color;
-    font-family: $font-family;
-    font-size: 16px;
-    line-height: 1.5;
-}
 
 // Add some padding to the main container
 .app-container {
@@ -31,22 +21,23 @@ p {
     margin: 0 0 10px;
     font-family: $font-family;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 0.5;
+    padding: 1;
 }
 div {
-    margin: 0 auto;
-    padding: 5px;
+    margin:  auto;
+    padding: 1px;
     background-color: $background-color;
     color: $text-color;
     font-family: $font-family;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 0.5;
     width: 50%
 }
 // Style headings
 h1, h2, h3, h4, h5, h6 {
     color: $text-color-red;
-    margin: 0 0 10px;
+    margin: 10 0 10px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     text-align: center;
@@ -65,43 +56,46 @@ a {
 }
 
 .Dicepic {
-    width: 50px;
-    height: 50px;
+    width: 5%;
+   // height: 50px;
     margin: 3 auto;
-    background-color: $background-color;
     text-align: center;
+   
 }
 
 .DiceCombos {
-    width: auto;
-    //height: 50px;
-    //margin:  50 50 50 50;
-    padding: auto;
+    width: 50%;
     background-color: $background-color;
-    align-items: center;
+    
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    //float: auto;
+    //display: inline-grid;
+    //justify-content: right;
+    //align-items: center;
+    width:fit-content;
+    padding: 5 5 5 5;
 }
-
 .DiceButton {
-    width: 50px;
-    height: 100px;
+   display: inline-grid;
+    width: 1em;
+    //height: 100px;
     border-color: $background-color;
-    margin: 0 auto;
-
+    margin: 100 100 100 100;
+    overflow: noclip;
     &:hover {
-        background-color: #005999;
+        background-color: #000003;
+        //width: 26px;
+        padding: auto;
+        //height: 105px;
     }
 } 
 
 
 .RollHistory {
     width: 100%;
-    height: 50px;
+   // height: 500px;
     margin: 0 auto;
     padding: 10px;
   
@@ -109,5 +103,54 @@ a {
     font-family: $font-family;
     font-size: 16px;
     line-height: 1.5;
-    
+    overflow: scroll;
 }
+
+.wrapper{
+    background-color: $background-color;
+    
+} 
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.RollSelectTitle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.divider {
+    width: 5%;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .LeftSide {
+    float:left;
+    width: 70%;
+    height: 500px;
+    //display: inline;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .RightSide {
+    float: right;
+   // display: inline;
+    width: 25%;
+    height: 500px;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap:nowrap ;
+    gap: 1.25rem;
+    overflow: scroll;
+  }
+  /* .img{
+    float:auto;
+    width: 1%;
+  } */

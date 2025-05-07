@@ -55,7 +55,7 @@ export class Call {
         this.outcome = CrapsCall.SEVEN_52;
       }
       else if ((this.diceA === 3 && this.diceB === 4) || (this.diceA === 4 && this.diceB === 3)) {
-        this.outcome = CrapsCall.SEVEN_34;
+        this.outcome = CrapsCall.SEVEN_43;
       }
       else if ((this.diceA === 5 && this.diceB === 3) || (this.diceA === 3 && this.diceB === 5)) {
         this.outcome = CrapsCall.EASY_EIGHT_53;
@@ -136,7 +136,7 @@ export class Call {
           this.diceA = 5;
           this.diceB = 2;
           break;
-        case CrapsCall.SEVEN_34:
+        case CrapsCall.SEVEN_43:
           this.diceA = 3;
           this.diceB = 4;
           break;

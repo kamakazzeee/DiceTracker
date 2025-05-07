@@ -17,7 +17,7 @@ export enum CrapsCall {
     HARD_SIX_33,
     SEVEN_61,
     SEVEN_52,
-    SEVEN_34,
+    SEVEN_43,
     EASY_EIGHT_53,
     HARD_EIGHT_44,
     EASY_EIGHT_62,
