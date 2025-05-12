@@ -8,7 +8,7 @@
 import { CrapsCall } from './CrapsCall';
 import { Call } from './call';  
 import { CrapsPoint } from './CrapsPoint';
-import { C } from '@angular/cdk/keycodes';
+
 
 
 
@@ -51,50 +51,65 @@ export class CrapsRoll {
                 switch (call.diceTotal) { //switch on the dice total
                     case 2: //if the roll is a 2
                         this.passLineLosers.push(call); //add the call to the pass line losers
-                        
+                        call.result = 'Loser';
                         break;
                     case 3: //if the roll is a 3
                         this.passLineLosers.push(call); //add the call to the pass line losers  
-                        
+                        call.result = 'Loser';
                         break;
                     case 7: //if the roll is a 7
                         this.passLineWinners.push(call); //add the call to the pass line winners
+                        call.result = 'Winner';
                         break;
                     case 11: //if the roll is an 11 
                         this.passLineWinners.push(call); //add the call to the pass line winners
+                        call.result = 'Winner';
                         break;
                     case 12: //if the roll is a 12
                         this.passLineLosers.push(call); //add the call to the pass line losers  
+                        call.result = 'Loser';
                         break;
                     case 4: //if the roll is a 4
                         this.point = CrapsPoint.POINT_4; //set the point to 4
                         this.pointsArray.push(this.point); //add the point to the array
                         this.isComeOut = false; //set the roll to not be a come out roll
+                        call.isPoint = true;
+                        call.result = 'Point';
                         break;
                     case 5: //if the roll is a 5
                         this.point = CrapsPoint.POINT_5; //set the point to 5
                         this.pointsArray.push(this.point); //add the point to the array
                         this.isComeOut = false; //set the roll to not be a come out roll
+                        call.isPoint = true;
+                        call.result = 'Point';
                         break;
                     case 6: //if the roll is a 6
                         this.point = CrapsPoint.POINT_6; //set the point to 6
                         this.pointsArray.push(this.point); //add the point to the array
                         this.isComeOut = false; //set the roll to not be a come out roll
+                        call.isPoint = true;
+                        call.result = 'Point';
                         break;
                     case 8: //if the roll is a 8
                         this.point = CrapsPoint.POINT_8; //set the point to 8
                         this.pointsArray.push(this.point); //add the point to the array
                         this.isComeOut = false; //set the roll to not be a come out roll
+                        call.isPoint = true;
+                        call.result = 'Point';
                         break;
                     case 9: //if the roll is a 9
                         this.point = CrapsPoint.POINT_9; //set the point to 9   
                         this.pointsArray.push(this.point); //add the point to the array
                         this.isComeOut = false; //set the roll to not be a come out roll
+                        call.isPoint = true;
+                        call.result = 'Point';
                         break;
                     case 10: //if the roll is a 10
                         this.point = CrapsPoint.POINT_10; //set the point to 10 
                         this.pointsArray.push(this.point); //add the point to the array
                         this.isComeOut = false; //set the roll to not be a come out roll
+                        call.isPoint = true;
+                        call.result = 'Point';
                         break;
                     default: //if the roll is not number or is a no roll
                         this.point = CrapsPoint.NO_POINT; //set the point to no point
@@ -107,12 +122,14 @@ export class CrapsRoll {
                     this.passLineWinners.push(call);
                     this.isComeOut = true;
                     this.point = CrapsPoint.NO_POINT;
+                    call.result = 'Winner';
                 }
 
                 else if (call.diceTotal === 7){
                     this.passLineLosers.push(call);
                     this.open = false;
                     this.point = CrapsPoint.NO_POINT;
+                    call.result = 'Seven Out';
                 }    // end else if
                 this.rolls.push(call);
                 return true;

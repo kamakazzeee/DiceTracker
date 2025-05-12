@@ -23,7 +23,7 @@ export class AppComponent {
 
   onClickTwo11() {
     console.log('Button was clicked!');
-    this.rollObject.rolls.push(new Call(1, 1));
+    this.roll.push(new Call(1, 1));
   }
 
   onClickThree21() {
