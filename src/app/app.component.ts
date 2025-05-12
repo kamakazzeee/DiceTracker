@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Call } from './models/call';
 import { CrapsCall } from './models/CrapsCall';
+import { CrapsRoll } from './models/CrapsRoll';
 
 
 @Component({
@@ -18,10 +19,11 @@ export class AppComponent {
   public roll: Call[] = []; 
   public outcome: CrapsCall = CrapsCall.NO_ROLL;
   public CrapsCall = CrapsCall;
+  public rollObject = new CrapsRoll();
 
   onClickTwo11() {
     console.log('Button was clicked!');
-    this.roll.push(new Call(1, 1));
+    this.rollObject.rolls.push(new Call(1, 1));
   }
 
   onClickThree21() {

@@ -27,7 +27,8 @@ export enum CrapsCall {
     HARD_TEN_55, 
     YO_ELEVEN_65,
     TWELVE_66,
-    NO_ROLL   
+    NO_ROLL,
+      
     
     
     //21 possible combinations OR  calls

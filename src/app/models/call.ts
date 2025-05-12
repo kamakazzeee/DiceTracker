@@ -4,7 +4,9 @@ export class Call {
   public diceA: number = 0;
   public diceB: number = 0;
   public outcome: CrapsCall = CrapsCall.NO_ROLL;
-  private isPoint: boolean = false;
+  public isPoint: boolean = false;
+ // public isComeOut: boolean = false;
+  public diceTotal: number = 0;
 
  
   constructor(diceA: number, diceB: number);
@@ -16,7 +18,7 @@ export class Call {
       this.diceB = myarray[1];
       
       this.isPoint = false;
-
+      
 
       if (this.diceA === 0 || this.diceB === 0) {
         this.outcome = CrapsCall.NO_ROLL;
@@ -86,6 +88,8 @@ export class Call {
       }
       else {
         this.outcome = CrapsCall.NO_ROLL;
+        this.diceA = 0;
+        this.diceB = 0;
       }
       return;
       }
@@ -192,6 +196,15 @@ export class Call {
    
   }
 
+  this.setDiceTotal();
 
+}
+  public getDiceTotal(): number {
+       return this.diceTotal;
+  }
 
-}}
+  public setDiceTotal(): void {
+     this.diceTotal = this.diceA + this.diceB;
+  }
+
+}
